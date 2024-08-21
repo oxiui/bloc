@@ -1,0 +1,21 @@
+[package]
+name = "bloc"
+version = "0.1.0"
+rust-version = "1.80.1"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["Dipl.-Ing. Andreas Gorges"]
+repository = "https://github.com/oxiui/bloc"
+# homepage = "https://www.oxiui.com"
+keywords = ["enum", "handler", "bloc", "state"]
+categories = ["rust-patterns", "data-structures"]
+description = "A state management library"
+
+exclude = [ #
+    "publish",
+]
+
+[dependencies]
+enum_handler_derive = "0.1.0"
+
+[lints]

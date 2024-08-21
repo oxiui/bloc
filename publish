@@ -1,0 +1,26 @@
+#!/bin/bash
+
+set -e
+
+echo "cargo clean"
+cargo clean
+
+echo "cargo clippy"
+cargo clippy --all
+
+echo "cargo build"
+cargo build --all
+
+# echo "cargo build release"
+# cargo build --release --all
+
+echo "cargo doc"
+cargo doc --no-deps --all
+
+echo "cargo test"
+cargo test --all
+
+cargo package --list --allow-dirty
+
+cargo publish --dry-run --allow-dirty
+
